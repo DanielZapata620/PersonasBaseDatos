@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Ej3Personas.Views.AgregarPersonaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Ej3Personas.Views" Loaded="UserControl_Loaded"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" >
+    <DockPanel Margin="50">
+        <Button Command="{Binding AgregarCommand}" Padding="10" DockPanel.Dock="Bottom" Height="50" Background="Green">
+            <Image Source="/Assets/save.png"></Image>
+        </Button>
+        <Button Command="{Binding AgregarCommand}" Padding="10" DockPanel.Dock="Bottom" Height="50" Background="Green">
+            <Image Source="/Assets/save.png"></Image>
+        </Button>
+        <StackPanel Margin="20" >
+            <TextBlock FontSize="20" Margin="10">Nombre completo:</TextBlock>
+            <TextBox Text="{Binding Persona.Nombre}" FontSize="20" x:Name="TxtNombre" Margin="10"  ></TextBox>
+            <TextBlock FontSize="20" Margin="10">Edad:</TextBlock>
+            <TextBox Text="{Binding Persona.Edad, ValidatesOnDataErrors=True}" FontSize="20" x:Name="TxtEdad" Margin="10"></TextBox>
+            <TextBlock FontSize="20" Margin="10">Género</TextBlock>
+            <ComboBox  SelectedValue="{Binding Persona.Genero, ValidatesOnDataErrors=True}" ItemsSource="{Binding Sexos}"  FontSize="20" Name="CmbGenero" Margin="10">
+            </ComboBox>
+            <TextBlock Foreground="Red" Text="{Binding Error}"></TextBlock>
+        </StackPanel>
+    </DockPanel>
+</UserControl>

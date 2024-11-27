@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\girl.png" />
+    <None Remove="Assets\new-user.png" />
+    <None Remove="Assets\remove-user.png" />
+    <None Remove="Assets\save.png" />
+    <None Remove="Assets\standing-up-man-.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\girl.png" />
+    <Resource Include="Assets\new-user.png" />
+    <Resource Include="Assets\remove-user.png" />
+    <Resource Include="Assets\save.png" />
+    <Resource Include="Assets\standing-up-man-.png" />
+  </ItemGroup>
+
+</Project>
